@@ -20,22 +20,14 @@ let timelapseData = [];
 
 // Allowed color palette (must match client-side palette)
 const ALLOWED_COLORS = new Set([
-    '#1a1c2c', // Dark Purple
-    '#5d275d', // Purple
-    '#b13e53', // Mauve
-    '#ef7d57', // Peach
-    '#ffcd75', // Light Orange
-    '#a7f070', // Light Green
-    '#38b764', // Green
-    '#257179', // Teal
-    '#29366f', // Dark Blue
-    '#3b5dc9', // Blue
-    '#41a6f6', // Light Blue
-    '#73eff7', // Cyan
-    '#f4f4f4', // White
-    '#94b0c2', // Light Gray
-    '#566c86', // Gray
-    '#333c57'  // Dark Gray
+    // Row 1: Dark burgundy to green-teal
+    '#6D001A', '#BE0039', '#FF4500', '#FFA800', '#FFD635', '#FFF8B8', '#FFFFCC', '#00A368',
+    // Row 2: Light green to purple-blue
+    '#00CC78', '#00756F', '#009EAA', '#00CCC0', '#2450A4', '#3690EA', '#51E9F4', '#493AC1',
+    // Row 3: Lavender-blue to light pink
+    '#6A5CFF', '#811E9F', '#B44AC0', '#E4ABFF', '#DE107F', '#FF3881', '#FF99AA', '#FFCCDD',
+    // Row 4: Brown to white
+    '#6D482F', '#9C6926', '#FFB470', '#FFD8B1', '#000000', '#515252', '#898D90', '#D4D7D9', '#FFFFFF'
 ]);
 
 // Load canvas data from file on startup
