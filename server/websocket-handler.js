@@ -27,7 +27,7 @@ const ALLOWED_COLORS = new Set([
     // Row 3: Lavender-blue to light pink
     '#6A5CFF', '#811E9F', '#B44AC0', '#E4ABFF', '#DE107F', '#FF3881', '#FF99AA', '#FFCCDD',
     // Row 4: Brown to white
-    '#6D482F', '#9C6926', '#FFB470', '#FFD8B1', '#000000', '#515252', '#898D90', '#D4D7D9', '#FFFFFF'
+    '#6D482F', '#9C6926', '#FFB470', '#000000', '#515252', '#898D90', '#D4D7D9', '#FFFFFF'
 ]);
 
 // Load canvas data from file on startup
