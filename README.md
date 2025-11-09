@@ -216,4 +216,4 @@ Inspired by Reddit's [r/place](https://www.reddit.com/r/place/) collaborative ar
 
 ---
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by tobik
