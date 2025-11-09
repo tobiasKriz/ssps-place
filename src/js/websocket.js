@@ -4,15 +4,15 @@ let reconnectInterval = null;
 function connectWebSocket() {
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
     const host = window.location.hostname;
+    const port = window.location.port;
     
-    // On production (Render, etc.), use the same host without port
-    // On localhost, use port 3000
+    // Build WebSocket URL
     let wsUrl;
-    if (window.location.port) {
-        // Development - use the current port
-        wsUrl = `${protocol}//${host}:${window.location.port}`;
+    if (port && port !== '80' && port !== '443') {
+        // Development or custom port - include the port
+        wsUrl = `${protocol}//${host}:${port}`;
     } else {
-        // Production - no port needed (uses 80/443)
+        // Production (no port or standard ports 80/443)
         wsUrl = `${protocol}//${host}`;
     }
     
