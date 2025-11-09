@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Data files (optional - uncomment if you don't want to include canvas data in git)
+# server/canvas-data.json
+# server/timelapse-data.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env

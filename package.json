@@ -1,0 +1,26 @@
+{
+  "name": "ssps-place",
+  "version": "1.0.0",
+  "description": "A real-time collaborative pixel art canvas inspired by Reddit's r/place",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "keywords": [
+    "pixel-art",
+    "canvas",
+    "websocket",
+    "collaborative",
+    "real-time"
+  ],
+  "author": "",
+  "license": "MIT"
+}

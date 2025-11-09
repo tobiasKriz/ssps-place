@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSPS Place</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>SSPS Place</h1>
+        <p>Collaborative pixel art canvas - Place one pixel every 10 seconds</p>
+    </header>
+    
+    <div id="main-container">
+        <div id="controls">
+            <div id="color-palette">
+                <h3>Select Color:</h3>
+                <div id="color-picker">
+                    <div class="color-option" data-color="#1a1c2c" style="background-color: #1a1c2c;" title="Dark Purple"></div>
+                    <div class="color-option" data-color="#5d275d" style="background-color: #5d275d;" title="Purple"></div>
+                    <div class="color-option" data-color="#b13e53" style="background-color: #b13e53;" title="Mauve"></div>
+                    <div class="color-option" data-color="#ef7d57" style="background-color: #ef7d57;" title="Peach"></div>
+                    <div class="color-option" data-color="#ffcd75" style="background-color: #ffcd75;" title="Light Orange"></div>
+                    <div class="color-option" data-color="#a7f070" style="background-color: #a7f070;" title="Light Green"></div>
+                    <div class="color-option" data-color="#38b764" style="background-color: #38b764;" title="Green"></div>
+                    <div class="color-option" data-color="#257179" style="background-color: #257179;" title="Teal"></div>
+                    <div class="color-option" data-color="#29366f" style="background-color: #29366f;" title="Dark Blue"></div>
+                    <div class="color-option" data-color="#3b5dc9" style="background-color: #3b5dc9;" title="Blue"></div>
+                    <div class="color-option" data-color="#41a6f6" style="background-color: #41a6f6;" title="Light Blue"></div>
+                    <div class="color-option" data-color="#73eff7" style="background-color: #73eff7;" title="Cyan"></div>
+                    <div class="color-option" data-color="#f4f4f4" style="background-color: #f4f4f4;" title="White"></div>
+                    <div class="color-option" data-color="#94b0c2" style="background-color: #94b0c2;" title="Light Gray"></div>
+                    <div class="color-option" data-color="#566c86" style="background-color: #566c86;" title="Gray"></div>
+                    <div class="color-option" data-color="#333c57" style="background-color: #333c57;" title="Dark Gray"></div>
+                </div>
+                <div id="selected-color-display">
+                    <span>Selected: </span>
+                    <div id="current-color" style="background-color: #1a1c2c;"></div>
+                </div>
+            </div>
+            
+            <div id="status">
+                <div id="timer-display">Ready to place!</div>
+                <div id="connection-status">Connecting...</div>
+                <div id="coordinates">x: -, y: -</div>
+            </div>
+        </div>
+        
+        <div id="canvas-container">
+            <canvas id="rplace-canvas"></canvas>
+        </div>
+    </div>
+    
+    <script src="js/canvas.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/websocket.js"></script>
+</body>
+</html>
