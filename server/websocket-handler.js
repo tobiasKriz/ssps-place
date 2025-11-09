@@ -339,7 +339,9 @@ function setCanvasState(state) {
     canvasState = state;
 }
 
+// Export all functions properly
 module.exports = handleWebSocketConnection;
+module.exports.handleWebSocketConnection = handleWebSocketConnection;
 module.exports.getCanvasState = getCanvasState;
 module.exports.setCanvasState = setCanvasState;
 module.exports.saveCanvasData = saveCanvasData;

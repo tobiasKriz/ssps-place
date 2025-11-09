@@ -53,56 +53,6 @@ Network: http://192.168.1.XXX:3000
 
 Share the **Network URL** with others on your local network!
 
-## 🌐 Optional: Set Up a Custom Local Domain
-
-Instead of using `http://192.168.1.XXX:3000`, you can access your server with a custom domain like `http://ssps-place.local:3000`!
-
-### Option 1: Local DNS Server (Automatic for All Devices)
-
-Run this script on your Linux server:
-
-```bash
-# Make the DNS setup script executable
-chmod +x setup-local-dns.sh
-
-# Run it as root
-sudo ./setup-local-dns.sh
-```
-
-Follow the prompts to set up a custom domain (e.g., `ssps-place.local`).
-
-Then, on each device on your network:
-1. Go to WiFi/Network Settings
-2. Change DNS server to your server's IP (e.g., `192.168.1.100`)
-3. Access: `http://ssps-place.local:3000`
-
-### Option 2: Router DNS (Easiest - Automatic)
-
-1. Log into your router admin panel (usually `192.168.1.1`)
-2. Find "DNS Settings" or "Local DNS" or "DHCP Settings"
-3. Add a custom DNS entry:
-   - **Hostname:** `ssps-place.local`
-   - **IP Address:** Your server's IP
-4. Save and reboot router
-
-Now everyone automatically uses: `http://ssps-place.local:3000`
-
-### Option 3: Hosts File (Per-Device)
-
-**On Windows:**
-1. Open Notepad as Administrator
-2. Open: `C:\Windows\System32\drivers\etc\hosts`
-3. Add: `192.168.1.XXX    ssps-place.local`
-4. Save
-
-**On Linux/Mac:**
-```bash
-sudo nano /etc/hosts
-# Add: 192.168.1.XXX    ssps-place.local
-```
-
-**On Android/iOS:** Use a hosts editor app
-
 ## Managing the Service
 
 ### Check Status
