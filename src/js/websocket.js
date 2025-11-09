@@ -4,9 +4,20 @@ let reconnectInterval = null;
 function connectWebSocket() {
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
     const host = window.location.hostname;
-    const port = window.location.port || '3000';
     
-    socket = new WebSocket(`${protocol}//${host}:${port}`);
+    // On production (Render, etc.), use the same host without port
+    // On localhost, use port 3000
+    let wsUrl;
+    if (window.location.port) {
+        // Development - use the current port
+        wsUrl = `${protocol}//${host}:${window.location.port}`;
+    } else {
+        // Production - no port needed (uses 80/443)
+        wsUrl = `${protocol}//${host}`;
+    }
+    
+    console.log('Connecting to WebSocket:', wsUrl);
+    socket = new WebSocket(wsUrl);
     
     socket.onopen = function(event) {
         console.log('Connected to WebSocket server');
